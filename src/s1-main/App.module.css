@@ -1,0 +1,13 @@
+.App {
+  --header_height: 60px;
+}
+
+.hw {
+}
+
+.hwTitle {
+  font-weight: 900;
+  margin: 50px 0px 5px 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
