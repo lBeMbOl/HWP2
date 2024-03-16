@@ -54,6 +54,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
     pureAddUser(name, setError, setName, addUserCallback);
     setTotalUsers(totalUsers + 1);
     setLastUserName(name);
+    setName("");
   };
 
   const onBlur = () => {
@@ -62,6 +63,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({
 
   const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
     if (name) pureOnEnter(e, addUser);
+    else setError("Имя не должно быть пустым");
   };
 
   const [totalUsers, setTotalUsers] = useState(0); // need to fix
