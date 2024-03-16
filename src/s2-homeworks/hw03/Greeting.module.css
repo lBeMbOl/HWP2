@@ -2,30 +2,50 @@
 }
 
 .inputAndButtonContainer {
+  display: flex;
+  gap: 20px;
 }
 
 .error {
+  color: red;
 }
 
 .input {
+  border: 1px solid rgb(124, 124, 242);
+  width: 300px;
+  border-radius: 2px;
+  height: 30px;
 }
 
 .input:focus {
+  outline: none;
 }
 
 .errorInput {
+  border: 1px solid rgb(250, 8, 8);
+  width: 300px;
+  border-radius: 2px;
+  height: 30px;
 }
 
 .button {
+  background-color: blue;
+  width: 50px;
+  height: 30px;
+  color: white;
+  border: none;
+  border-radius: 2px;
 }
 
 .button:focus {
+  border: 1px solid rgb(124, 124, 242);
 }
 
 .button:active {
 }
 
 .button:disabled {
+  background-color: rgb(100, 111, 238);
 }
 
 .text {
