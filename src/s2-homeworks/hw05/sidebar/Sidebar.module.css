@@ -1,4 +1,9 @@
 .sidebar {
+  display: flex;
+  position: absolute;
+  background-color: #07f7df;
+  height: 100%;
+  width: 300px;
 }
 
 .sidebar.open {
@@ -8,17 +13,34 @@
 }
 
 .nav {
+  width: 300px;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold; /* Делает шрифт жирным */
 }
 
 .nav a {
+  display: block; /* Делает ссылки блочными элементами */
+  margin-bottom: 10px; /* Отступ снизу для каждой ссылки */
+  text-decoration: none; /* Убирает подчеркивание */
 }
 
 .nav a:hover {
+  color: #09e809;
 }
 
 .nav a.active {
+  color: blue;
 }
 .close {
+  position: absolute;
+  top: 0; /* Расстояние от верхнего края родительского элемента */
+  right: 0; /* Расстояние от правого края родительского элемента */
+  z-index: 100; /* Устанавливает кнопку выше других элементов */
+  margin: 10px 10px 0px 0px;
+  background-color: transparent;
+  border: none;
 }
 
 .close img {

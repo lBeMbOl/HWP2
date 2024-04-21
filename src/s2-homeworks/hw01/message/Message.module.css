@@ -1,4 +1,11 @@
 .message {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
 }
 
 .imageAndText img {
@@ -22,4 +29,43 @@
 }
 
 .time {
+}
+
+.message {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  width: fit-content;
+  max-width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: lightblue;
+}
+
+.imageAndText {
+  display: flex;
+  align-items: center;
+}
+
+.imageAndText img {
+  margin-right: 10px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.messageText {
+  margin-top: 5px;
+}
+
+.time {
+  margin-left: 10px;
+  font-size: 12px;
+  color: gray;
 }
