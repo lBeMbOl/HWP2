@@ -1,15 +1,24 @@
 .radio {
+  display: inline-block; /* Изменяем display на inline-block, чтобы радио-кнопки шли в строку */
+  vertical-align: middle; /* Выравниваем радио-кнопки по центру относительно текста */
+  margin-right: 10px; /* Добавляем отступ справа для каждой радио-кнопки */
+  font-size: 24px; /* Увеличиваем размер шрифта */
+  accent-color: black;
 }
 
 .radio::before {
+  display: inline-block; /* Делаем лейбл inline-block, чтобы он отображался рядом с радио-кнопкой */
+  vertical-align: middle; /* Выравниваем текст по центру относительно радио-кнопки */
 }
-
 
 .radio:checked::before {
 }
 
 .label {
+  margin-bottom: 10px;
 }
 
 .options {
+  display: flex; /* Делаем контейнер flex-контейнером, чтобы радио-кнопки располагались в строку */
+  flex-direction: column;
 }
