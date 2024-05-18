@@ -5,12 +5,15 @@
 }
 
 .users {
+  padding-left: 100px;
+  margin-top: 30px;
 }
 
 .buttonsContainer {
 }
 
 .container {
+  max-width: 700px;
 }
 
 .thead {
@@ -19,5 +22,42 @@
 .nameCol {
 }
 
+.buttonsContainer {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px; /* Вы можете настроить значение отступа по вашему усмотрению */
+  justify-content: center;
+}
+
+/* Заголовки столбцов */
+.thead {
+  background-color: lightgray;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nameCol {
+  padding-right: 200px; /* Отступ между Full name и Age */
+}
+
 .ageCol {
+  font-weight: bold;
+  width: 500px;
+}
+
+/* Кнопки */
+.buttonsContainer {
+  justify-content: flex-end; /* Кнопки располагаются в правом верхнем углу */
+}
+
+.SuperButton {
+  margin-right: 300px; /* Отступ между кнопками */
+}
+
+.nameCol,
+.ageCol {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
