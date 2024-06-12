@@ -1,7 +1,18 @@
 .buttonsContainer {
+  display: flex;
+  gap: 20px;
+}
+button:disabled {
+  background-color: rgba(142, 142, 243, 0.664); /* Голубой цвет */
+  color: #fff; /* Белый цвет текста */
 }
 
 .clock {
+  padding: 30px;
+  height: 200px;
+  border-top: 2px solid rgba(90, 87, 87, 0.444); /* Линия сверху толщиной 1 пиксель и черного цвета */
+  border-bottom: 2px solid rgba(90, 87, 87, 0.444); /* Линия снизу толщиной 2 пикселя, пунктирная и красного цвета */
+  padding-top: 15px;
 }
 
 .watch {
@@ -11,4 +22,6 @@
 }
 
 .more {
+  margin-bottom: 20px;
+  color: rgba(42, 99, 99, 0.651);
 }
