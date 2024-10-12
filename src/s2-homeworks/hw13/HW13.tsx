@@ -22,6 +22,7 @@ const HW13 = () => {
   const [disabled, setDisabled] = useState(false);
 
   const send = (x?: boolean | null) => () => {
+    setDisabled(true);
     const url =
       x === null
         ? "https://xxxxxx.ccc" // имитация запроса на не корректный адрес
@@ -31,7 +32,6 @@ const HW13 = () => {
     setImage("");
     setText("");
     setInfo("...loading");
-    setDisabled(true);
 
     axios
       .post(url, { success: x })
@@ -47,13 +47,18 @@ const HW13 = () => {
           setCode("Ошибка 500!");
           setImage(error500);
           setText(e.response.data.errorText);
-          setInfo(e.response.data.errorText.info);
+          setInfo(
+            "ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)"
+          );
         }
         if (e.request.status == 400) {
           setCode("Ошибка 400!");
           setImage(error400);
           setText(e.response.data.errorText);
-          setInfo(e.response.data.errorText.info);
+          setInfo(
+            "ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!"
+          );
+          //   setInfo(e.response.data.errorText.info);
         }
         if (e.request.status == 0) {
           setCode("Error!");

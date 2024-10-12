@@ -10,7 +10,7 @@
 .image {
 }
 
-.textContainer{
+.textContainer {
 }
 
 .code {
@@ -19,4 +19,72 @@
 .text {
 }
 .info {
+}
+
+#hw13 {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+.hwTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Контейнер для кнопок */
+.buttonsContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Контейнер для ответа */
+.responseContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Контейнер для изображения */
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стилизация изображения */
+.image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Контейнер для текста */
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Стилизация кода */
+.code {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Стилизация текста */
+.text {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Стилизация информации */
+.info {
+  font-size: 14px;
+  color: #999;
 }
