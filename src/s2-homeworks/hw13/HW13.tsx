@@ -19,6 +19,7 @@ const HW13 = () => {
   const [text, setText] = useState("");
   const [info, setInfo] = useState("");
   const [image, setImage] = useState("");
+  const [disabled, setDisabled] = useState(false);
 
   const send = (x?: boolean | null) => () => {
     const url =
@@ -30,6 +31,7 @@ const HW13 = () => {
     setImage("");
     setText("");
     setInfo("...loading");
+    setDisabled(true);
 
     axios
       .post(url, { success: x })
@@ -38,6 +40,7 @@ const HW13 = () => {
         setImage(success200);
         setText(res.data.errorText);
         setInfo(res.data.info);
+        setDisabled(false);
       })
       .catch((e) => {
         if (e.request.status == 500) {
@@ -58,7 +61,7 @@ const HW13 = () => {
           setText(e.message);
           setInfo(e.name);
         }
-        console.log(e);
+        setDisabled(false);
       });
   };
 
@@ -72,7 +75,7 @@ const HW13 = () => {
             id={"hw13-send-true"}
             onClick={send(true)}
             xType={"secondary"}
-            // дописать
+            disabled={disabled}
           >
             Send true
           </SuperButton>
@@ -80,7 +83,7 @@ const HW13 = () => {
             id={"hw13-send-false"}
             onClick={send(false)}
             xType={"secondary"}
-            // дописать
+            disabled={disabled}
           >
             Send false
           </SuperButton>
@@ -88,7 +91,7 @@ const HW13 = () => {
             id={"hw13-send-undefined"}
             onClick={send(undefined)}
             xType={"secondary"}
-            // дописать
+            disabled={disabled}
           >
             Send undefined
           </SuperButton>
@@ -96,7 +99,7 @@ const HW13 = () => {
             id={"hw13-send-null"}
             onClick={send(null)} // имитация запроса на не корректный адрес
             xType={"secondary"}
-            // дописать
+            disabled={disabled}
           >
             Send null
           </SuperButton>
